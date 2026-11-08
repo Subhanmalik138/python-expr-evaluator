@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expr-eval"
+version = "1.0.0"
+description = "Arithmetic expression evaluator: tokenizer, shunting-yard parser, AST evaluation, variables and math functions, with a REPL and CLI"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Subhan Malik" }]
+
+[project.scripts]
+expr-eval = "expr_eval.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
